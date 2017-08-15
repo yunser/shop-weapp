@@ -1,0 +1,6 @@
+.result-box {
+    padding: 0 15px;
+}
+.result-item {
+    margin-bottom: 8px;
+}

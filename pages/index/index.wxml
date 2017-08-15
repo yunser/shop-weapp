@@ -1,0 +1,65 @@
+<view class="page">
+    <view class="page-header">
+    </view>
+    <view class="page-body">
+        <view class="container">
+            <text class="section-title">日常生活</text>
+            <view class="tool-list">
+                <view class="tool-item">
+                    <navigator class="item-content" url="../express/index">
+                        <image class="tool-img" src="/img/kuaidi.png"></image>
+                        <text class="tool-text">快递查询</text>
+                    </navigator>
+                </view>
+                <view class="tool-item">
+                    <navigator class="item-content" url="../calendar/calendar">
+                        <image class="tool-img" src="/img/kuaidi.png"></image>
+                        <text class="tool-text">农历查询</text>
+                    </navigator>
+                </view>
+                <view class="tool-item">
+                    <navigator class="item-content" url="../main/index">
+                        <image class="tool-img" src="/img/kuaidi.png"></image>
+                        <text class="tool-text">二维码制作</text>
+                    </navigator>
+                </view>
+                <!--<view class="tool-item">-->
+                    <!--<navigator class="item-content" url="../clock/index">-->
+                        <!--<image class="tool-img" src="/img/kuaidi.png"></image>-->
+                        <!--<text class="tool-text">番茄钟</text>-->
+                    <!--</navigator>-->
+                <!--</view>-->
+
+                <!--<view class="tool-item">-->
+                <!--<view class="item-content">-->
+                <!--<image class="tool-img" src="/img/kuaidi.png"></image>-->
+                <!--<text class="tool-text">快递查询</text>-->
+                <!--</view>-->
+                <!--</view>-->
+            </view>
+            <!--<text class="section-title">理财工具</text>-->
+            <!--<text>这是一个随便的 App，如果您觉得这个小程序不错，可以向开发者捐赠</text>-->
+            <!--<button bindtap="pay">我要捐赠</button>-->
+
+            <!--<view class="btn-area">-->
+            <!--<navigator url="../express/index">快递查询</navigator>-->
+            <!--<navigator url="/example/index">查看示例</navigator>-->
+            <!--<navigator url="../order/order">预约展示</navigator>-->
+            <!--</view>-->
+
+            <!--<text>有什么问题可以直接联系客服：</text>-->
+            <!--<contact-button type="default-dark" size="20" session-from="weapp"></contact-button>-->
+
+            <!--<view bindtap="bindViewTap" class="userinfo">-->
+            <!--<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>-->
+            <!--<text class="userinfo-nickname">{{userInfo.nickName}}</text>-->
+            <!--</view>-->
+            <!--<view class="usermotto">-->
+            <!--<text class="user-motto">{{motto}}12</text>-->
+            <!--</view>-->
+        </view>
+    </view>
+    <view class="page-footer">
+        © 2017 tool.yunser.com <!--<navigator class="about" url="/pages/about/index">关于</navigator>-->
+    </view>
+</view>

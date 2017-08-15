@@ -1,0 +1,7 @@
+node_modules/
+dist/
+target/
+.project
+.jshintrc
+npm-debug.log*
+.idea

@@ -1,0 +1,8 @@
+<view class="page">
+    <view class="page-header">
+        <view>关于</view>
+    </view>
+    <view class="page-footer">
+        © 2017 tool.yunser.com
+    </view>
+</view>

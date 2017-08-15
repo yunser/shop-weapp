@@ -1,0 +1,17 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/express/index",
+        "pages/order/order",
+        "pages/logs/logs",
+        "pages/clock/index",
+        "pages/calendar/calendar",
+        "pages/main/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "云设工具",
+        "navigationBarTextStyle": "black"
+    }
+}
