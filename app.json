@@ -5,7 +5,7 @@
         "pages/order/order",
         "pages/logs/logs",
         "pages/clock/index",
-        "pages/calendar/calendar",
+        "pages/calendar/index",
         "pages/main/index"
     ],
     "window": {

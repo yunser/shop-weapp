@@ -12,7 +12,7 @@
                     </navigator>
                 </view>
                 <view class="tool-item">
-                    <navigator class="item-content" url="../calendar/calendar">
+                    <navigator class="item-content" url="../calendar/index">
                         <image class="tool-img" src="/img/kuaidi.png"></image>
                         <text class="tool-text">农历查询</text>
                     </navigator>
