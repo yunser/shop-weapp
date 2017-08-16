@@ -10,7 +10,6 @@
   position: relative;
   display: flex;
   flex: 2;
-  height: 200px;
   justify-content: center;
   align-items: center;
   margin-top: -45px;

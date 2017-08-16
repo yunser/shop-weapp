@@ -1,17 +1,28 @@
 {
     "pages": [
+        "pages/home/index",
+
+        "pages/about/index",
         "pages/index/index",
+        "pages/detail/detail",
+
+        "pages/loan/index",
         "pages/express/index",
-        "pages/order/order",
+        "pages/five/index",
         "pages/logs/logs",
         "pages/clock/index",
+        "pages/monthly/monthly",
+        "pages/touzi/index",
+        "pages/qrcode/index",
         "pages/calendar/index",
-        "pages/main/index"
+
+        "pages/calculator/index",
+        "pages/super/index"
     ],
     "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
+        "backgroundTextStyle": "#f1f1f1",
+        "navigationBarBackgroundColor": "#009de0",
         "navigationBarTitleText": "云设工具",
-        "navigationBarTextStyle": "black"
+        "navigationBarTextStyle": "#fff"
     }
 }

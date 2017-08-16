@@ -1,0 +1,14 @@
+.loan-item {
+    display: block;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+.loan-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+}
+.loan-text {
+    line-height: 40px;
+    vertical-align: top;
+}

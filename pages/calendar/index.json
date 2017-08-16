@@ -1,7 +1,3 @@
 {
-    "navigationBarBackgroundColor": "#37373b",
-    "navigationBarTextStyle": "#fff",
-    "navigationBarTitleText": "农历查询",
-    "backgroundColor": "#efeff4",
-    "backgroundTextStyle": "light"
+    "navigationBarTitleText": "农历查询"
 }

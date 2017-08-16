@@ -1,71 +1,16 @@
-.container {
-    padding: 16px;
-}
-.section-title {
-    font-size: 18px;
-    margin-bottom: 16px;
-}
-/**/
-.tool-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 16px;
-    margin-left: -4px;
-    margin-right: -4px;
-}
-.tool-list .tool-item {
-    flex: 0 0 33.33%;
-    height: 100px;
-    padding: 0 4px;
-    margin-bottom: 8px;
-}
-.tool-list .item-content {
-    height: 100px;
-    background-color: #09c;
-    border-radius: 4px;
-    background-color: #d0bcf0;
-    padding: 1px;
-}
-.tool-list .tool-img {
-    display: block;
-    width: 40px;
-    height: 40px;
-    margin: 16px auto 8px auto;
-}
-.tool-list .tool-text {
-    display: block;
+.about-box {
+    margin-bottom: 160px;
     text-align: center;
 }
-
-.userinfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.about-box .info {
+    display: block;
+    margin-bottom: 8px;
 }
 
-.userinfo-avatar {
-    width: 128 rpx;
-    height: 128 rpx;
-    margin: 20 rpx;
-    border-radius: 50%;
+.contact-box {
+    text-align: center;
 }
-
-.userinfo-nickname {
-    color: #aaa;
-}
-
-.usermotto {
-    margin-top: 200px;
-}
-
-input {
-    border: 1px solid #1AAD19;
-    width: 90%;
-    height: 20px;
-    font-size: 12px;
-    padding: 5px 10px;
-}
-
-button {
-    margin-top: 20px;
+.contact-box .info {
+    display: block;
+    margin-bottom: 24px;
 }

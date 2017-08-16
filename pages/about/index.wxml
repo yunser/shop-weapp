@@ -1,6 +1,18 @@
 <view class="page">
     <view class="page-header">
-        <view>关于</view>
+        <view class="page-title">关于</view>
+    </view>
+    <view class="page-body">
+        <view class="about-box">
+            <text class="info">电脑版工具大全：tool.yunser.com</text>
+            <text class="info">如遇到任何问题，欢迎给我反馈：</text>
+            <text class="info">微信：chenjianhang01</text>
+            <text class="info">邮箱：admin@yunser.com</text>
+        </view>
+        <view class="contact-box">
+            <text class="info">或点击以下按钮直接联系客服：</text>
+            <contact-button type="default-dark" size="20" session-from="weapp"></contact-button>
+        </view>
     </view>
     <view class="page-footer">
         © 2017 tool.yunser.com
