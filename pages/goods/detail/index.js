@@ -10,7 +10,14 @@ Page({
         current: 0,
         goods: {
             item: {}
-        }
+        },
+
+        product: {},
+        images: [
+            'http://120.24.226.112:9998/static/img/logo.png',
+            'http://120.24.226.112:9998/static/img/logo.png',
+            'http://120.24.226.112:9998/static/img/logo.png'
+        ]
     },
     swiperchange(e) {
         this.setData({
@@ -18,7 +25,7 @@ Page({
         })
     },
     onLoad(option) {
-        this.goods = App.HttpResource('/goods/:id', {id: '@id'})
+        this.goods = App.HttpResource('/goodses/:id', {id: '@id'})
         this.setData({
             id: option.id
         })
@@ -58,13 +65,11 @@ Page({
     	// App.HttpService.getDetail(id)
         this.goods.getAsync({id: id})
         .then(res => {
-            const data = res.data
-            console.log(data)
-        	if (data.meta.code == 0) {
-                data.data.images.forEach(n => n.path = App.renderImage(n.path))
+            res = res.data
+            console.log(res)
+        	if (res.code == 0) {
         		this.setData({
-                    'goods.item': data.data, 
-                    total: data.data.images.length, 
+                    product: res.data
                 })
         	}
         })
