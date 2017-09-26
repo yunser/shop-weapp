@@ -1,0 +1,73 @@
+{
+    "meta": {
+        "code": 0,
+        "message": "调用成功"
+    },
+    "data": {
+        "items": [
+            {
+                "name": "生活电器",
+                "remark": "高性价比的智能小家电",
+                "_id": "59ba79d453fb4e4b66d91458",
+                "__v": 0,
+                "create_at": "2017-09-13T02:11:34.725Z"
+            },
+            {
+                "name": "T恤",
+                "remark": "自在而潇洒的穿着感",
+                "_id": "59ba7a0853fb4e4b66d91459",
+                "__v": 0,
+                "create_at": "2017-09-13T02:11:34.725Z"
+            },
+            {
+                "name": "床品件套",
+                "remark": "品牌制造商出品",
+                "_id": "59ba7a3c53fb4e4b66d9145a",
+                "__v": 0,
+                "create_at": "2017-09-13T02:11:34.725Z"
+            }
+        ],
+        "paginate": {
+            "page": 1,
+            "pages": 1,
+            "perPage": 10,
+            "total": 3,
+            "prev": 1,
+            "next": 1,
+            "hasNext": false,
+            "hasPrev": false
+        }
+    }
+}
+{
+    "meta": {
+        "code": 0,
+        "message": "调用成功"
+    },
+    "data": {
+        "items": [
+            {
+                "__v": 0,
+                "_id": "59c09b9353fb4e4b66d914f4",
+                "address": "广东省深圳市宝安区广深路西乡段233号",
+                "gender": "male",
+                "name": "sss",
+                "tel": "13511111111",
+                "update_at": "2017-09-22T02:02:45.326Z",
+                "user": "597852ac8dcbd81eb3b53961",
+                "create_at": "2017-09-13T02:11:34.736Z",
+                "is_def": true
+            }
+        ],
+        "paginate": {
+            "page": 1,
+            "pages": 1,
+            "perPage": 10,
+            "total": 1,
+            "prev": 1,
+            "next": 1,
+            "hasNext": false,
+            "hasPrev": false
+        }
+    }
+}

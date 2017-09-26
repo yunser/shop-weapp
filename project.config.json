@@ -1,0 +1,64 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": false,
+		"minified": true
+	},
+	"compileType": "weapp",
+	"libVersion": "1.5.3",
+	"appid": "wx019a311300db8664",
+	"projectname": "shop",
+	"condition": {
+		"weapp": {
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "detail",
+					"pathName": "pages/goods/detail/index",
+					"query": "id=119"
+				},
+				{
+					"id": -1,
+					"name": "detail",
+					"pathName": "pages/classify/index",
+					"query": "id=119"
+				},
+				{
+					"id": 2,
+					"name": "address-detail",
+					"pathName": "pages/address/list/index",
+					"query": "id=1"
+				},
+				{
+					"id": 3,
+					"name": "address-edit",
+					"pathName": "pages/address/edit/index",
+					"query": "id=1"
+				},
+				{
+					"id": -1,
+					"name": "address-add",
+					"pathName": "pages/address/add/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "cart",
+					"pathName": "pages/cart/index",
+					"query": ""
+				}
+			]
+		},
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		}
+	}
+}

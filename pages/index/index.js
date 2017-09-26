@@ -3,7 +3,7 @@ const App = getApp()
 Page({
     data: {
         banners: [{}, {}],
-        products: [{}, {}],
+        goodses: [{}, {}],
 
         activeIndex: 0,
         navList: [],
@@ -109,7 +109,7 @@ Page({
             console.log(res)
             if (res.code == 0) {
                 this.setData({
-                    products: res.data
+                    goodses: res.data
                 })
             }
         })

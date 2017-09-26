@@ -2,6 +2,7 @@ const App = getApp()
 
 Page({
     data: {
+        addresses: [],
         address: {},
         prompt: {
             hidden: !0,
@@ -11,7 +12,10 @@ Page({
         },
     },
     onLoad() {
-        this.address = App.HttpResource('/address/:id', {id: '@id'})
+        this.address = App.HttpResource('/addresses/:id', {id: '@id'})
+        this.onPullDownRefresh()
+    },
+    onShow() {
         this.onPullDownRefresh()
     },
     initData() {
@@ -40,9 +44,9 @@ Page({
         const id = e.currentTarget.dataset.id
         App.HttpService.setDefalutAddress(id)
         .then(res => {
-            const data = res.data
-            console.log(data)
-            if (data.meta.code == 0) {
+            res = res.data
+            console.log(res)
+            if (res.code === 0) {
                 this.onPullDownRefresh()
             }
         })
@@ -54,16 +58,17 @@ Page({
         // App.HttpService.getAddressList(params)
         this.address.queryAsync(params)
         .then(res => {
-            const data = res.data
-            console.log(data)
-            if (data.meta.code == 0) {
-                address.items = [...address.items, ...data.data.items]
-                address.paginate = data.data.paginate
-                address.params.page = data.data.paginate.next
-                address.params.limit = data.data.paginate.perPage
+            res = res.data
+            console.log(res)
+            if (res.code === 0) {
+                // address.items = [...address.items, ...data.data.items]
+                // address.paginate = data.data.paginate
+                // address.params.page = data.data.paginate.next
+                // address.params.limit = data.data.paginate.perPage
                 this.setData({
-                    address: address,
-                    'prompt.hidden': address.items.length,
+                    addresses: res.data
+                    // address: address,
+                    // 'prompt.hidden': address.items.length,
                 })
             }
         })

@@ -3,18 +3,35 @@
 <view class="classify">
 	<view class="nav_left" bindscrolltolower="getMore" bindscrolltoupper="onRefresh">
 		<scroll-view scroll-y="true" style="height: {{ deviceHeight + 'px' }}">
-      		<view bindtap="changeTab" data-index="{{ index }}" data-id="{{ item._id }}" class="nav_left_item {{ activeIndex === index ? 'active' : '' }}" wx:for="{{ classify.items }}" wx:key="">
+      		<view bindtap="changeTab" wx:for="{{ categories }}" wx:key="" data-index="{{ index }}" data-id="{{ item._id }}" class="nav_left_item {{ activeIndex === index ? 'active' : '' }}">
       			{{ item.name }}
       		</view>
    		 </scroll-view>
 	</view>
 	<view class="nav_right">
 		<view class="title">
-			{{ classify.items[activeIndex].name }}
+			{{ categories[activeIndex].name }}
 		</view>
 		<view class="content">
 			<scroll-view scroll-y="true" style="height: {{ (deviceHeight - 49) + 'px' }}" bindscrolltolower="getMoreGoods" bindscrolltoupper="onRefreshGoods">
-				<template is="list" data="{{ goods, prompt }}"/>
+				<view class="scroll-list">
+					<view class="weui-panel weui-panel_access">
+						<view class="weui-panel__bd">
+							<view class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" wx:for="{{ goodses }}" wx:key="" bindtap="navigateTo" data-id="{{ item.id }}">
+								<view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+									<image class="weui-media-box__thumb" src="{{ item.image }}" />
+								</view>
+								<view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+									<view class="weui-media-box__title">{{ item.name }}</view>
+									<view class="weui-media-box__desc">
+										<text class="text-orangered">¥ {{ item.price }}</text>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<!--<template is="list" data="{{ goods, prompt }}"/>-->
 			</scroll-view>
 		</view>
 	</view>

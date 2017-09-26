@@ -2,6 +2,7 @@ const App = getApp()
 
 Page({
     data: {
+    	address: {},
     	show: !0,
         form: {
 			name   : '', 
@@ -50,7 +51,7 @@ Page({
 			},
 		})
 
-    	this.address = App.HttpResource('/address/:id', {id: '@id'})
+    	this.address = App.HttpResource('/addresses/:id', {id: '@id'})
     	this.setData({
     		id: option.id
     	})
@@ -62,24 +63,25 @@ Page({
     	// App.HttpService.getAddressDetail(id)
     	this.address.getAsync({id: id})
 		.then(res => {
-            const data = res.data
-            console.log(data)
-			if (data.meta.code == 0) {
-				const params = {
-					name   : data.data.name, 
-					gender : data.data.gender, 
-					tel    : data.data.tel, 
-					address: data.data.address, 
-					is_def : data.data.is_def, 
-				}
-
-				const radio = this.data.radio
-				radio.forEach(n => n.checked = n.value === data.data.gender)
+			res = res.data
+            console.log(res)
+			if (res.code === 0) {
+				// const params = {
+				// 	name   : data.data.name,
+				// 	gender : data.data.gender,
+				// 	tel    : data.data.tel,
+				// 	address: data.data.address,
+				// 	is_def : data.data.is_def,
+				// }
+                //
+				// const radio = this.data.radio
+				// radio.forEach(n => n.checked = n.value === data.data.gender)
 
 				this.setData({
-					show : !params.is_def, 
-					radio: radio, 
-					form : params, 
+                    address: res.data,
+					show : !res.data.is_def,
+					// radio: radio,
+					// form : params,
 				})
 			}
 		})
@@ -114,10 +116,9 @@ Page({
 		// App.HttpService.putAddress(id, params)
 		this.address.updateAsync({id: id}, params)
 		.then(res => {
-            const data = res.data
-            console.log(data)
-			if (data.meta.code == 0) {
-				this.showToast(data.meta.message)
+			res = res.data
+			if (res.code === 0) {
+				this.showToast('修改成功')
 			}
 		})
 	},
@@ -125,10 +126,9 @@ Page({
 		// App.HttpService.deleteAddress(this.data.id)
 		this.address.deleteAsync({id: this.data.id})
 		.then(res => {
-            const data = res.data
-            console.log(data)
-			if (data.meta.code == 0) {
-				this.showToast(data.meta.message)
+			res = res.data
+			if (res.code === 0) {
+				this.showToast('删除成功')
 			}
 		})
 	},

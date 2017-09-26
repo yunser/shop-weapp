@@ -6,7 +6,7 @@ Page({
 		items: [
 			{
 				icon: '../../assets/images/iconfont-order.png',
-				text: '我的订单2',
+				text: '我的订单',
 				path: '/pages/order/list/index'
 			}, 
 			{
@@ -17,7 +17,7 @@ Page({
 			{
 				icon: '../../assets/images/iconfont-kefu.png',
 				text: '联系客服',
-				path: '18521708248',
+				path: '15602229201',
 			}, 
 			{
 				icon: '../../assets/images/iconfont-help.png',

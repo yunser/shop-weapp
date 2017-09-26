@@ -50,7 +50,7 @@ Page({
 			},
 		})
 
-        this.address = App.HttpResource('/address/:id', {id: '@id'})
+        this.address = App.HttpResource('/addresses/:id', {id: '@id'})
     },
 	radioChange(e) {		 
 		console.log('radio发生change事件，携带value值为：', e.detail.value)
@@ -81,10 +81,10 @@ Page({
 		// App.HttpService.postAddress(params)
 		this.address.saveAsync(params)
 		.then(res => {
-            const data = res.data
-            console.log(data)
-			if (data.meta.code == 0) {
-				this.showToast(data.meta.message)
+			res = res.data
+            console.log(res)
+			if (res.code === 0) {
+				this.showToast('修改成功')
 			}
 		})
 	},

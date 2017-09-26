@@ -2,7 +2,10 @@ const App = getApp()
 
 Page({
     data: {
-        activeIndex: 0, 
+        categories: [],
+        activeIndex: 0,
+        goodses: [],
+
         goods: {},
         classify: {},
         prompt: {
@@ -10,8 +13,8 @@ Page({
         },
     },
     onLoad() {
-        this.classify = App.HttpResource('/classify/:id', {id: '@id'})
-        this.goods = App.HttpResource('/goods/:id', {id: '@id'})
+        this.classify = App.HttpResource('/categories/:id', {id: '@id'})
+        this.goods = App.HttpResource('/goodses/:id', {id: '@id'})
         this.getSystemInfo()
         this.onRefresh()
     },
@@ -37,21 +40,22 @@ Page({
         const classify = this.data.classify
         const params = classify.params
 
+        console.log('获取分类列表')
         // App.HttpService.getClassify(params)
         this.classify.queryAsync(params)
         .then(res => {
-            const data = res.data
-            console.log(data)
-            if (data.meta.code == 0) {
-                classify.items = [...classify.items, ...data.data.items]
-                classify.paginate = data.data.paginate
-                classify.params.page = data.data.paginate.next
-                classify.params.limit = data.data.paginate.perPage
+            res = res.data
+            if (res.code === 0) {
+                // classify.items = [...classify.items, ...data.data.items]
+                // classify.paginate = data.data.paginate
+                // classify.params.page = data.data.paginate.next
+                // classify.params.limit = data.data.paginate.perPage
                 this.setData({
-                    classify: classify, 
-                    'prompt.hidden': classify.items.length, 
-                    activeIndex: 0, 
-                    'goods.params.type': classify.items[0]._id, 
+                    categories: res.data,
+                    activeIndex: 0
+                    // classify: classify,
+                    // 'prompt.hidden': classify.items.length,
+                    // 'goods.params.type': classify.items[0]._id,
                 })
 
                 this.getGoods()
@@ -102,19 +106,24 @@ Page({
         const params = goods.params
 
         // App.HttpService.getGoods(params)
-        this.goods.queryAsync(params)
+        console.log('获取视频', this.categories)
+        console.log(this.activeIndex)
+        this.goods.queryAsync({
+            category: this.data.categories[this.data.activeIndex].category_id
+        })
         .then(res => {
-            const data = res.data
-            console.log(data)
-            if (data.meta.code == 0) {
-                data.data.items.forEach(n => n.thumb_url = App.renderImage(n.images[0] && n.images[0].path))
-                goods.items = [...goods.items, ...data.data.items]
-                goods.paginate = data.data.paginate
-                goods.params.page = data.data.paginate.next
-                goods.params.limit = data.data.paginate.perPage
+            res = res.data
+            console.log(res)
+            if (res.code === 0) {
+                // data.data.items.forEach(n => n.thumb_url = App.renderImage(n.images[0] && n.images[0].path))
+                // goods.items = [...goods.items, ...data.data.items]
+                // goods.paginate = data.data.paginate
+                // goods.params.page = data.data.paginate.next
+                // goods.params.limit = data.data.paginate.perPage
                 this.setData({
-                    goods: goods,
-                    'prompt.hidden': goods.items.length,
+                    goodses: res.data
+                    // goods: goods,
+                    // 'prompt.hidden': goods.items.length,
                 })
             }
         })

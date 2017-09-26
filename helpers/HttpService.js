@@ -14,8 +14,8 @@ class HttpService extends WxRequest {
 			classify    : '/classify', 
 			goods       : '/goods', 
 			search      : '/goods/search/all', 
-			cart        : '/cart', 
-			address     : '/address', 
+			cart        : '/carts',
+			address     : '/addresses',
 			order       : '/order', 
         }
         this.interceptors.use({

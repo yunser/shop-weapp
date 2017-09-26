@@ -35,12 +35,12 @@ Page({
     },
     addCart(e) {
         const goods = this.data.goods.item._id
-        App.HttpService.addCartByUser(goods)
+        App.HttpService.addCartByUser(this.data.product)
         .then(res => {
-            const data = res.data
-            console.log(data)
-            if (data.meta.code == 0) {
-                this.showToast(data.meta.message)
+            res = res.data
+            console.log(res)
+            if (res.code === 0) {
+                this.showToast('添加成功')
             }
         })
     },

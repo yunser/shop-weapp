@@ -2,6 +2,7 @@ const App = getApp()
 
 Page({
     data: {
+        items: [],
         canEdit: !1,
         carts: {
             items: []
@@ -38,13 +39,14 @@ Page({
     getCarts() {
         App.HttpService.getCartByUser()
         .then(res => {
-            const data = res.data
-            console.log(data)
-            if (data.meta.code == 0) {
-                data.data.forEach(n => n.goods.thumb_url = App.renderImage(n.goods.images[0] && n.goods.images[0].path))
+            res = res.data
+            console.log(res)
+            if (res.code === 0) {
+                // data.data.forEach(n => n.goods.thumb_url = App.renderImage(n.goods.images[0] && n.goods.images[0].path))
                 this.setData({
-                    'carts.items': data.data,
-                    'prompt.hidden': data.data.length,
+                    items: res.data
+                    // 'carts.items': data.data,
+                    // 'prompt.hidden': data.data.length,
                 })
             }
         })
@@ -71,12 +73,13 @@ Page({
             content: '确定要删除这个宝贝吗？', 
         })
         .then(data => {
-            if (data.confirm == 1) {
+            if (data.confirm) {
+                console.log(121212)
                 App.HttpService.delCartByUser(id)
                 .then(res => {
-                    const data = res.data
-                    console.log(data)
-                    if (data.meta.code == 0) {
+                    res = res.data
+                    console.log(res)
+                    if (res.code === 0) {
                         this.getCarts()
                     }
                 })
