@@ -15,8 +15,8 @@
 			"current": 0,
 			"list": [
 				{
-					"id": -1,
-					"name": "detail",
+					"id": 0,
+					"name": "goods-detail",
 					"pathName": "pages/goods/detail/index",
 					"query": "id=119"
 				},

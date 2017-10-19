@@ -14,6 +14,16 @@
         <view class="price">¥ {{ product.price }}</view>
         <text class="remark">{{ product.desc }}</text>
     </view>
+    <view class="comment-box">
+        <view class="header">
+            <view>评价(568)</view>
+            <div>好评度 97%</div>
+        </view>
+        <view class="comment-list">
+            <view class="comment-item"></view>
+        </view>
+    </view>
+
     <view class="btn-plus" bindtap="addCart">
         <image class="icon" src="../../../assets/images/iconfont-plus-circle.png" />
         <text>加入购物车</text>

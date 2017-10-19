@@ -36,6 +36,7 @@
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    border-bottom: 1px solid #eee;
 }
 
 .swiper-pager {
